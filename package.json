@@ -1,0 +1,22 @@
+{
+  "name": "layout-3",
+  "version": "1.0.0",
+  "description": "Быстрая настройка npm + CLI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/postcss src/styles.css -o dist/compiled.css --watch",
+    "build": "node_modules/.bin/postcss src/styles.css -o dist/compiled.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  },
+  "devDependencies": {
+    "postcss-cli": "^8.3.1"
+  }
+}

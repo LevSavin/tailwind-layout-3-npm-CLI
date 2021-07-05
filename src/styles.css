@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Mazzard';
+        font-weight: 400;
+        font-size: 17px;
+        color: #1D263A;
+    }
+
+    @font-face {
+        font-family: 'Mazzard';
+        src: url('fonts/MazzardM-Regular.woff2') format('woff2'),
+            url('fonts/MazzardM-Regular.woff') format('woff'),
+            url('fonts/MazzardM-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Mazzard';
+        src: url('fonts/MazzardM-SemiBold.woff2') format('woff2'),
+            url('fonts/MazzardM-SemiBold.woff') format('woff'),
+            url('fonts/MazzardM-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+    }
+}
+
+@layer components {
+     .btn-nocolor {
+        @apply px-16 py-7 flex flex-nowrap font-semibold text-xl text-white hover:text-yellow-600 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75;
+    }
+
+    .btn-mint {
+        @apply px-16 py-7 flex flex-nowrap font-semibold text-xl text-white hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-900 focus:ring-opacity-75;
+        background-color: #20BFA9;
+    }    
+
+    .list {
+        list-style-type: none;
+        counter-reset: item;
+    }
+    
+    .item:before {
+        @apply font-semibold text-3xl mx-11;
+        content: "0" counter(item);
+        counter-increment: item; 
+        color: rgba(32, 191, 169, 0.3);
+    }
+}
+
+@layer utilities {
+    .wrap-container {
+        width: 81vw;
+    }
+
+    
+    .bg-gray {
+        background-color: #7A7E85;
+    }
+
+   .border-bottom:hover {
+        border-bottom: 2px solid #fff;
+        margin-bottom: -2px;
+    }
+}
